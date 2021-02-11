@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const app = express();
-
+require('./models/index')
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}))
 // var corsOptions = {
@@ -19,7 +19,7 @@ async ()=> {
     try{
         await db.sync()
     }catch(e){
-        console.log(e);
+        console.log(e);  
     }
 };
 

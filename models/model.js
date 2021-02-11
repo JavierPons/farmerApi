@@ -1,17 +1,21 @@
 const  Sequelize  = require("sequelize");
 const db = require("./index")
 
-    const Farmer = db.define("farmerdb",{
-        
-        name: {
-            type: Sequelize.STRING
-        },
-        tel: {
-            type: Sequelize.STRING
-        },
-        gender: {
-            type: Sequelize.STRING
-        }
-    });
-   
-module.exports = Farmer; 
+   module.exports = ( sequelize, type) => {
+    return sequelize.define('farmerdb',{
+                    id: {
+                        type: type.INTEGER,
+                        primaryKey: true,
+                        autoIncrement: true
+                    },
+                    name: {
+                        type: type.STRING
+                    },
+                    tel: {
+                        type: type.STRING
+                    },
+                    gender: {
+                        type: type.STRING
+                    }
+    })
+   }
