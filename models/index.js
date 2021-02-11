@@ -11,7 +11,7 @@ const sequelize = new Sequelize(dbConfig.DB_NAME, dbConfig.DB_USER, dbConfig.DB_
 sequelize.authenticate().then(()=> {
     console.log("Connection has been stablised successfully.");
 }).catch(err => {
-    console.log("Unable to connect" , err);
+    console.log("Unable to connect to the database" , err);
 })
 // const db = {};
 

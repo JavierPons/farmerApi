@@ -1,12 +1,8 @@
-const Sequelize = require("sequelize");
+const  Sequelize  = require("sequelize");
 const db = require("./index")
 
     const Farmer = db.define("farmerdb",{
-        farmID:{
-            type: Sequelize.INTEGER,
-            primaryKey: true,
-            autoIncrement: true
-        },
+        
         name: {
             type: Sequelize.STRING
         },
@@ -18,4 +14,4 @@ const db = require("./index")
         }
     });
    
-module.exports = Farmer;
+module.exports = Farmer; 
