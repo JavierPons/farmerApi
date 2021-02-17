@@ -4,6 +4,8 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const route = require('./api');
 
+const FarmDb = require('./models/model')
+
 const app = express();
 require('./models/index')
 

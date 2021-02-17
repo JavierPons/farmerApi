@@ -5,7 +5,7 @@ const FarmDb = require('./models/model');
 
 
 
-    router.post("/api/farm/", function (req, res) {
+    router.post("/farm/", function (req, res) {
             // if(req.body !== null && req.body !== undefined){
                 const name = req.body.name;
                 const tel = req.body.tel;
