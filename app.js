@@ -16,13 +16,9 @@ app.use(bodyParser.urlencoded({extended: true}))
 // Resolving CORS problems
 app.use(cors())
 
-
-
-
 app.use("/api", route);
 
 // DB
-
 const db = require('./models/index')
 async ()=> {
     try{
