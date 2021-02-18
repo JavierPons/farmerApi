@@ -33,19 +33,6 @@ async ()=> {
 };
 
 
-app.post("/farm", (req, res) => {
-    // if(req.body !== null && req.body !== undefined){
-        const name = req.body.name;
-        const tel = req.body.tel;
-        const gender = req.body.gender
-
-        FarmDb.create({name: name, tel: tel, gender: gender}).then((data)=> {
-            res.send(data)
-        })
-
-    // }
-})
-
 app.get("/", (req,res) => {
     res.json({message: "This is the api for farmer search"})
 })
