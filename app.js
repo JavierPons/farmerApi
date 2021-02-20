@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const fileupload = require("express-fileupload");
 const bodyParser = require("body-parser");
