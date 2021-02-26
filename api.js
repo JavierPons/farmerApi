@@ -21,7 +21,30 @@ const FarmDb = require('./models/model');
             res.send(list)
         })
         
-    })    
+    })  
+
+
+    router.delete("/deleteItem/", async function (req, res) {
+            const id = req.query.id;
+            console.log('dddd',id);
+
+           
+         FarmDb.destroy({
+                where: {id:id}
+        }).then(num=> {
+            if(num == 1){
+                res.send({message: 'Deleted successfully!'})
+            } else {
+                res.send({
+                    message: "Cannot delete"
+                })
+            }
+        }).catch(err => {
+            res.status(500).send({
+                message: 'Could not delete'
+            })
+        })
+    })  
 
 
         module.exports = router;
